@@ -42,7 +42,7 @@ https://en.bem.info/methodology/quick-start/*/
 
 /*Sección Menu*/
 
-section.menu{
+.menu{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -577,7 +577,10 @@ menu__title{
     font-weight: 500;
     text-align: center;
     color: #464646;
+}
 
+.menu__list__item__contato{
+    display: none;
 }
 
 /* Vamos a desafiarnos trabajando con responsividad?
@@ -602,24 +605,131 @@ Utiliza las referencias de los breakpoints @media abajo */
 }
 
 /*Mobile*/
-@media (min-width: 425px) {
+
+@media (max-width: 425px) {
 
 /*Menu*/
+.menu__list{
+    display: none;
+}
+
+.menu__list__item__contato{
+    display: block;
+}
+
+.menu__header{
+    gap: 0px;
+}
+
+.menu__header h3{
+    font-size: 10px;
+}
 
 /*Titulo*/
 
+.title__div{
+    flex-direction: column;
+    padding: 16px;
+    justify-content: center;
+    align-items: start;
+    width: 90%;
+    height: 15rem;
+    align-self: stretch
+}
+
+#profile{
+    width: 98px;
+    height: 98px;
+    order: 0;
+    flex-grow: 0;
+}
+
+.title__container{
+    align-items: flex-start;
+    width: 328px;
+    height: 148px;
+    order: 1;
+    flex-grow: 0;
+}
+
+.title__bio{
+    margin: 10px 0;
+}
+.title__subsection{
+    margin: 10px 0;
+}
+.title__network{
+    margin: 0;
+}
+
 /*Sección sobre mi*/
 
+.about{
+    padding: 10px 16px;
+    gap: 10px;
+}
+
+.about__title{
+    margin: 10px 0;
+}
+.about__paragraph{
+    margin: 0;
+    width: auto;
+}
+
 /*Skills*/
+.skills__line{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 /*Hobbies*/
- 
+
+.hobbies__line{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 /*Formación Académica*/
-
+.academic__courses{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center ;
+}
 /*Experiencia Profesional*/
-
- /*Contacto*/
-
+.experience{
+    flex-direction: column;
+    align-items: center;
+}
+.experience__img{
+    width: 100%;
+    height: 100%;
+}
+.experiencie__box{
+    flex-direction: column;
+    padding: 0;
+}
+.experience__info{
+    align-items: center;
+    width: 100%;
+}
+.experience__description{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+/*Contacto*/
+.formcontato__img{
+    display: none;
+}
+.formcontato__input{
+    width: 100%;
+}
+.formcontato__textarea{
+    width: 70%;
+}
 /*Footer*/
 
 }
